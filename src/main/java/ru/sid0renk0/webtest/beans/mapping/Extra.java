@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlValue;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-public class ExtrasElement {
+public class Extra {
 
     @XmlAttribute
     private String name;
@@ -14,10 +14,10 @@ public class ExtrasElement {
     @XmlValue
     private String value;
 
-    public ExtrasElement() {
+    public Extra() {
     }
 
-    public ExtrasElement(String name, String value) {
+    public Extra(String name, String value) {
         this.name = name;
         this.value = value;
     }
@@ -29,5 +29,10 @@ public class ExtrasElement {
 
     public String getValue() {
         return value;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("{%s='%s'}", name, value);
     }
 }
