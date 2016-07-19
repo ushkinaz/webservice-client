@@ -1,6 +1,6 @@
 package ru.sid0renk0.webtest.beans.response;
 
-import ru.sid0renk0.webtest.beans.mapping.ExtraHolder;
+import ru.sid0renk0.webtest.beans.ExtraHolder;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -10,9 +10,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlAccessorType(XmlAccessType.PROPERTY)
 @XmlRootElement(name = "response")
 public class Response extends ExtraHolder {
-    private Integer resultCode;
+    private final Integer resultCode;
 
-    public void setResultCode(Integer resultCode) {
+    /**
+     * Для сериализации
+     */
+    Response() {
+        this(0);
+    }
+
+    public Response(Integer resultCode) {
         this.resultCode = resultCode;
     }
 

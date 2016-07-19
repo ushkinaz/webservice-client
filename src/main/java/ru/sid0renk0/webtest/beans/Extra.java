@@ -1,4 +1,4 @@
-package ru.sid0renk0.webtest.beans.mapping;
+package ru.sid0renk0.webtest.beans;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -14,7 +14,10 @@ public class Extra {
     @XmlValue
     private String value;
 
-    public Extra() {
+    /**
+     * Для сериализации
+     */
+    Extra() {
     }
 
     public Extra(String name, String value) {

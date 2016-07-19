@@ -1,7 +1,7 @@
 package ru.sid0renk0.webtest.beans.request;
 
 
-import ru.sid0renk0.webtest.beans.mapping.ExtraHolder;
+import ru.sid0renk0.webtest.beans.ExtraHolder;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
