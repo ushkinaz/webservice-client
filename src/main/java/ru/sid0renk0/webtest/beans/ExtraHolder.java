@@ -23,7 +23,7 @@ public abstract class ExtraHolder {
      * Альтернативные варианты либо сложнее в реализации ({@code @XmlJavaTypeAdapter}),
      * либо ухудшают производительность на пустом месте при добавлении полей ({@code List<Extra>})
      */
-    private Map<String, Extra> extra = new HashMap<>();
+    private final Map<String, Extra> extra = new HashMap<>();
 
     @XmlElement(name = "extra")
     public Collection<Extra> getExtra() {

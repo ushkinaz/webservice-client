@@ -29,8 +29,8 @@ public class ClientController {
      */
     private final        ThreadLocal<Random> random = ThreadLocal.withInitial(Random::new);
 
-    private ClientRepository clientRepository;
-    private PasswordEncoder  passwordEncoder;
+    private final ClientRepository clientRepository;
+    private final PasswordEncoder  passwordEncoder;
 
     @Autowired
     public ClientController(ClientRepository clientRepository, PasswordEncoder passwordEncoder) {
@@ -57,7 +57,7 @@ public class ClientController {
         }
 
         if (isAuthorized(request, client)) {
-            Balance balance = new Balance(0);
+            Balance balance = new Balance();
             balance.setBalance(client.getBalance());
             return balance;
         } else {

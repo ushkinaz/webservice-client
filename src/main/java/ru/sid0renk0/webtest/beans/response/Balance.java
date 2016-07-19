@@ -11,15 +11,8 @@ import java.math.BigDecimal;
 public class Balance extends Response {
     private static final String EXTRA_BALANCE = "balance";
 
-    /**
-     * Для сериализации
-     */
-    Balance() {
-        this(0);
-    }
-
-    public Balance(Integer resultCode) {
-        super(resultCode);
+    public Balance() {
+        super(0);
     }
 
     public void setBalance(BigDecimal balance) {
