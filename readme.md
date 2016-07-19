@@ -13,7 +13,7 @@ Win/Mac/Linux:
 endpoint:
 [http://localhost:8080/clients](http://localhost:8080/clients)
 
-Postman коллекция с [тестами](https://www.getpostman.com/collections/b47edc98c53b4aeb53c7) 
+Тестировать проще всего в [Postman](https://www.getpostman.com/). Коллекция с тестами [тут](https://www.getpostman.com/collections/b47edc98c53b4aeb53c7) 
 
 # База данных
 
