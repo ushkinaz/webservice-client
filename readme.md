@@ -1,27 +1,29 @@
+[![Build Status](https://secure.travis-ci.org/ushkinaz/webservice-client.png?branch=master)](http://travis-ci.org/ushkinaz/webservice-client)
+
 # Задание
- см. assignment.md
+[смотри тут](assignment.md)
  
 # Запуск
 Кроме java 8 не нужно ничего
 
 Win/Mac/Linux:
 
-gradlew bootRun
+`gradlew bootRun`
 
 endpoint:
-http://localhost:8080/clients
+[http://localhost:8080/clients](http://localhost:8080/clients)
 
 # База данных
 
 h2 in memory
-конслоль доступна по http://localhost:8080/h2-console
+конслоль доступна по [http://localhost:8080/h2-console](http://localhost:8080/h2-console)
 Параметры:
 
+```
 driver: org.h2.Driver
-
 url: jdbc:h2:mem:testdb
-
 user: sa
+```
 
 # Особенности реализации
 * Сделано в предположении, что нагрузки небольшие
@@ -32,8 +34,8 @@ user: sa
 * Интеграционные тесты в данном случае проигнорированы
 
 # Пути развития в настоящий проект
-1. Создать промежуточный уровень DTO бинов. Заполняются из запросов, проходят валидацию,
+1. Включить нормальную БД
+2. Включить кеширование
+3. Создать промежуточный уровень DTO бинов. Заполняются из запросов, проходят валидацию,
  уходят во внутренние сервисы. Кроме прочих плюшек, такой подход упрощает изменение внешнего API.
-2. Включить нормальную БД
-3. Включить кеширование
-4. Разнести ClientController на сервисы, см. пункт 1
+4. Разнести ClientController на сервисы
