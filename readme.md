@@ -17,10 +17,11 @@ endpoint:
 
 # База данных
 
-h2 in memory
-консоль доступна по [http://localhost:8080/h2-console](http://localhost:8080/h2-console)
-Параметры:
+Используется встраиваемая h2 в памяти.
 
+Консоль доступна по [http://localhost:8080/h2-console](http://localhost:8080/h2-console)
+
+Параметры:
 ```
 driver: org.h2.Driver
 url: jdbc:h2:mem:testdb
