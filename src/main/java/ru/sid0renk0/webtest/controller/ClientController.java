@@ -13,7 +13,6 @@ import ru.sid0renk0.webtest.domain.Client;
 import ru.sid0renk0.webtest.domain.ClientRepository;
 
 import javax.transaction.Transactional;
-import java.util.Random;
 
 @Controller
 @ResponseBody
@@ -22,12 +21,7 @@ import java.util.Random;
     produces = "application/xml")
 public class ClientController {
     @SuppressWarnings({"UnusedDeclaration"})
-    private static final Logger              LOGGER = LoggerFactory.getLogger(ClientController.class);
-    /*
-     * Генерация рандомных чисел может стать узким горлышком, т.к. она ThreadSafe
-     * Поэтому каждому потоку - свой генератор
-     */
-    private final        ThreadLocal<Random> random = ThreadLocal.withInitial(Random::new);
+    private static final Logger LOGGER = LoggerFactory.getLogger(ClientController.class);
 
     private final ClientRepository clientRepository;
     private final PasswordEncoder  passwordEncoder;
