@@ -22,13 +22,8 @@ public abstract class ExtraHolder {
      * Для хранения выбран Map, что бы упростить работу с классом и инкапсулировать весь ужас маппинга в XML
      * Альтернативные варианты либо сложнее в реализации ({@code @XmlJavaTypeAdapter}),
      * либо ухудшают производительность на пустом месте при добавлении полей ({@code List<Extra>})
-     *
      */
     private Map<String, Extra> extra = new HashMap<>();
-
-    public ExtraHolder() {
-        extra = new HashMap<>();
-    }
 
     @XmlElement(name = "extra")
     public Collection<Extra> getExtra() {
